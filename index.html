@@ -6,13 +6,18 @@
 
   <title>A.S KAWO TABLE WATER | Dandume</title>
 
-  <meta name="description" content="A.S KAWO TABLE WATER - Clean, fresh and quality drinking water in Dandume.">
+  <meta name="description"
+        content="A.S KAWO TABLE WATER - Clean, fresh and quality drinking water in Dandume, Katsina.">
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -24,19 +29,19 @@
 
     header {
       background: #0066cc;
-      padding: 12px 6%;
+      padding: 10px 6%;
       display: flex;
       align-items: center;
       justify-content: space-between;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
     }
 
     .logo img {
-      width: 55px;
-      height: 55px;
+      width: 58px;
+      height: 58px;
       object-fit: cover;
       border-radius: 50%;
       background: white;
@@ -67,21 +72,24 @@
 
     .hero h1 {
       font-size: 45px;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
     .hero p {
       font-size: 19px;
-      margin-bottom: 28px;
+      margin-bottom: 12px;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 25px;
-      margin: 5px;
+      padding: 14px 24px;
+      margin: 7px 4px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
     }
 
     .whatsapp {
@@ -92,6 +100,11 @@
     .call {
       background: white;
       color: #0066cc;
+    }
+
+    .maps {
+      background: #ff6b35;
+      color: white;
     }
 
     section {
@@ -151,6 +164,49 @@
       margin: 15px 0;
     }
 
+    .order {
+      background: white;
+    }
+
+    .order-box {
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 30px;
+      background: #f4fbff;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      text-align: left;
+    }
+
+    .order-box label {
+      display: block;
+      font-weight: bold;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    .order-box input,
+    .order-box select {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    .order-box button {
+      width: 100%;
+      margin-top: 22px;
+      background: #25d366;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
     .contact {
       background: #0066cc;
       color: white;
@@ -163,6 +219,15 @@
     .contact-info {
       font-size: 18px;
       margin: 20px 0;
+    }
+
+    .location-box {
+      max-width: 700px;
+      margin: 30px auto;
+      background: white;
+      color: #123;
+      padding: 25px;
+      border-radius: 18px;
     }
 
     footer {
@@ -180,8 +245,8 @@
       }
 
       nav a {
-        margin: 0 6px;
-        font-size: 13px;
+        margin: 0 5px;
+        font-size: 12px;
       }
 
       .hero h1 {
@@ -217,6 +282,7 @@
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#price">Price</a>
+      <a href="#order">Order</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -230,22 +296,24 @@
 
       <h1>A.S KAWO TABLE WATER</h1>
 
-      <p>
-        Pure • Fresh • Clean • Quality Drinking Water
-      </p>
+      <p>💧 Pure • Fresh • Clean • Quality Drinking Water</p>
 
-      <p>
-        Serving Dandume and surrounding areas.
-      </p>
+      <p>📍 Serving Dandume, Katsina</p>
 
       <a class="btn whatsapp"
          href="https://wa.me/2347063255239">
-        💬 Order on WhatsApp
+        💬 WhatsApp
       </a>
 
       <a class="btn call"
          href="tel:07063255239">
         📞 Call Now
+      </a>
+
+      <a class="btn maps"
+         href="https://maps.app.goo.gl/FMa6qishhTGKDku69"
+         target="_blank">
+        📍 Get Directions
       </a>
 
     </div>
@@ -256,21 +324,22 @@
   <!-- ABOUT -->
   <section id="about">
 
-    <h2>About A.S KAWO</h2>
+    <h2>About Us</h2>
 
     <div class="about">
 
       <p>
-        A.S KAWO TABLE WATER is a drinking water business
-        located in Dandume.
+        Welcome to A.S KAWO TABLE WATER.
+        We provide clean, fresh and quality drinking water
+        for homes, shops, events and businesses.
       </p>
 
       <br>
 
       <p>
-        We are committed to providing clean, fresh and quality
-        drinking water at an affordable price for homes,
-        shops, events and businesses.
+        Our business is located in Dandume, Katsina,
+        and we are committed to providing reliable service
+        at an affordable price.
       </p>
 
     </div>
@@ -278,7 +347,7 @@
   </section>
 
 
-  <!-- WHY US -->
+  <!-- WHY CHOOSE US -->
   <section>
 
     <h2>Why Choose Us?</h2>
@@ -289,13 +358,13 @@
         <div class="icon">💧</div>
         <h3>Clean Water</h3>
         <p>
-          Clean and fresh drinking water for everyday use.
+          Fresh and clean drinking water for everyday use.
         </p>
       </div>
 
       <div class="card">
         <div class="icon">💰</div>
-        <h3>Affordable</h3>
+        <h3>Affordable Price</h3>
         <p>
           Quality drinking water at an affordable price.
         </p>
@@ -303,7 +372,7 @@
 
       <div class="card">
         <div class="icon">⭐</div>
-        <h3>Reliable</h3>
+        <h3>Reliable Service</h3>
         <p>
           We are committed to serving our customers.
         </p>
@@ -323,18 +392,71 @@
 
       <h3>Table Water</h3>
 
-      <div class="price">
-        ₦200
-      </div>
+      <div class="price">₦200</div>
 
       <p>Per bag / carton</p>
-
-      <br>
 
       <a class="btn whatsapp"
          href="https://wa.me/2347063255239">
         🛒 Order Now
       </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- ORDER -->
+  <section class="order" id="order">
+
+    <h2>Place Your Order</h2>
+
+    <p>
+      Cika bayanan da ke ƙasa, sannan ka danna
+      <strong>Send Order on WhatsApp</strong>.
+    </p>
+
+    <div class="order-box">
+
+      <form onsubmit="sendOrder(event)">
+
+        <label>Your Name</label>
+
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your name"
+          required
+        >
+
+        <label>Quantity</label>
+
+        <select id="quantity" required>
+
+          <option value="">Select quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+
+        </select>
+
+        <label>Delivery / Location</label>
+
+        <input
+          type="text"
+          id="location"
+          placeholder="Enter your location"
+          required
+        >
+
+        <button type="submit">
+          💬 Send Order on WhatsApp
+        </button>
+
+      </form>
 
     </div>
 
@@ -348,7 +470,7 @@
 
     <div class="contact-info">
 
-      <p>📍 <strong>Dandume, Nigeria</strong></p>
+      <p>📍 <strong>Titin Sheme, Dandume, Katsina</strong></p>
 
       <p>📞 <strong>07063255239</strong></p>
 
@@ -364,6 +486,23 @@
       📞 Call Us
     </a>
 
+    <div class="location-box">
+
+      <h3>📍 Find Us on Google Maps</h3>
+
+      <p>
+        A.S KAWO TABLE WATER<br>
+        Titin Sheme, Dandume, Katsina
+      </p>
+
+      <a class="btn maps"
+         href="https://maps.app.goo.gl/FMa6qishhTGKDku69"
+         target="_blank">
+        🗺️ Open Google Maps
+      </a>
+
+    </div>
+
   </section>
 
 
@@ -375,10 +514,47 @@
     </p>
 
     <p>
-      Dandume, Nigeria
+      Dandume, Katsina, Nigeria
     </p>
 
   </footer>
 
+
+  <!-- WHATSAPP ORDER SCRIPT -->
+  <script>
+
+    function sendOrder(event) {
+
+      event.preventDefault();
+
+      const name =
+        document.getElementById("name").value;
+
+      const quantity =
+        document.getElementById("quantity").value;
+
+      const location =
+        document.getElementById("location").value;
+
+      const price = 200;
+
+      const total = quantity * price;
+
+      const message =
+        "Hello A.S KAWO TABLE WATER.%0A%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Quantity: " + encodeURIComponent(quantity) + "%0A" +
+        "Price per bag/carton: ₦" + price + "%0A" +
+        "Total: ₦" + total + "%0A" +
+        "Delivery Location: " + encodeURIComponent(location);
+
+      window.open(
+        "https://wa.me/2347063255239?text=" + message,
+        "_blank"
+      );
+    }
+
+  </script>
+
 </body>
-  </html>
+    </html>
