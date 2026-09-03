@@ -6,263 +6,249 @@
 
   <title>A.S KAWO TABLE WATER | Dandume</title>
 
-  <meta name="description"
-        content="A.S KAWO TABLE WATER - Clean, fresh and quality drinking water in Dandume, Katsina.">
+  <meta name="description" content="A.S KAWO TABLE WATER - Quality table water in Titin Sheme, Dandume, Katsina. ₦200 per bag/carton. Order now on WhatsApp.">
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-
-    html {
       scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, sans-serif;
-      background: #f4fbff;
+      background: #f4f9ff;
       color: #123;
       line-height: 1.6;
     }
 
     header {
-      background: #0066cc;
-      padding: 10px 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      background: #0077b6;
+      color: white;
+      padding: 15px 5%;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
     }
 
-    .logo img {
-      width: 58px;
-      height: 58px;
-      object-fit: cover;
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-area img {
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
+      object-fit: cover;
       background: white;
+    }
+
+    .logo-area h2 {
+      font-size: 18px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
       margin-left: 15px;
-      font-size: 14px;
       font-weight: bold;
     }
 
-    .hero {
-      min-height: 82vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px;
-      color: white;
-      background: linear-gradient(135deg, #0066cc, #00b4d8);
+    nav a:hover {
+      text-decoration: underline;
     }
 
-    .hero-content {
-      max-width: 750px;
+    .hero {
+      background: linear-gradient(135deg, #0077b6, #00b4d8);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: white;
+      padding: 5px;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-size: 45px;
-      margin-bottom: 12px;
+      font-size: 38px;
+      margin-bottom: 10px;
     }
 
     .hero p {
-      font-size: 19px;
-      margin-bottom: 12px;
+      font-size: 18px;
+      margin-bottom: 20px;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 24px;
-      margin: 7px 4px;
-      border-radius: 30px;
+      padding: 13px 22px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      margin: 5px;
       border: none;
       cursor: pointer;
-      font-size: 15px;
     }
 
-    .whatsapp {
-      background: #25d366;
+    .btn-white {
+      background: white;
+      color: #0077b6;
+    }
+
+    .btn-green {
+      background: #25D366;
       color: white;
     }
 
-    .call {
-      background: white;
-      color: #0066cc;
-    }
-
-    .maps {
-      background: #ff6b35;
+    .btn-dark {
+      background: #023047;
       color: white;
     }
 
     section {
-      padding: 65px 7%;
-      text-align: center;
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
     }
 
-    section h2 {
-      color: #0066cc;
-      font-size: 31px;
-      margin-bottom: 18px;
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+      color: #0077b6;
+      font-size: 30px;
     }
 
     .about {
+      text-align: center;
       max-width: 800px;
       margin: auto;
       font-size: 17px;
     }
 
     .cards {
-      max-width: 1000px;
-      margin: 35px auto 0;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
 
     .card {
       background: white;
       padding: 30px 20px;
-      border-radius: 16px;
+      border-radius: 12px;
+      text-align: center;
       box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     }
 
-    .icon {
-      font-size: 42px;
+    .card h3 {
+      color: #0077b6;
       margin-bottom: 10px;
     }
 
-    .price-section {
-      background: #e9f8ff;
-    }
-
     .price-box {
-      max-width: 430px;
-      margin: 30px auto;
       background: white;
-      padding: 35px;
-      border-radius: 18px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     }
 
     .price {
-      color: #0066cc;
-      font-size: 40px;
+      font-size: 42px;
+      color: #0077b6;
       font-weight: bold;
       margin: 15px 0;
     }
 
-    .order {
+    form {
       background: white;
-    }
-
-    .order-box {
-      max-width: 500px;
-      margin: 30px auto;
+      max-width: 600px;
+      margin: auto;
       padding: 30px;
-      background: #f4fbff;
-      border-radius: 18px;
+      border-radius: 15px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      text-align: left;
     }
 
-    .order-box label {
+    form label {
       display: block;
-      font-weight: bold;
       margin-top: 15px;
-      margin-bottom: 5px;
+      font-weight: bold;
     }
 
-    .order-box input,
-    .order-box select {
+    form input,
+    form textarea,
+    form select {
       width: 100%;
       padding: 13px;
+      margin-top: 7px;
       border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 15px;
+      border-radius: 7px;
+      font-size: 16px;
     }
 
-    .order-box button {
+    form button {
       width: 100%;
-      margin-top: 22px;
-      background: #25d366;
+      margin-top: 20px;
+      background: #25D366;
       color: white;
       border: none;
       padding: 15px;
-      border-radius: 30px;
-      font-size: 16px;
+      border-radius: 8px;
+      font-size: 17px;
       font-weight: bold;
       cursor: pointer;
     }
 
     .contact {
-      background: #0066cc;
-      color: white;
+      text-align: center;
     }
 
-    .contact h2 {
-      color: white;
-    }
-
-    .contact-info {
-      font-size: 18px;
-      margin: 20px 0;
-    }
-
-    .location-box {
-      max-width: 700px;
-      margin: 30px auto;
-      background: white;
-      color: #123;
-      padding: 25px;
-      border-radius: 18px;
+    .contact p {
+      margin: 12px 0;
+      font-size: 17px;
     }
 
     footer {
-      background: #003b73;
+      background: #023047;
       color: white;
       text-align: center;
       padding: 25px 15px;
     }
 
     @media (max-width: 700px) {
-
-      header {
+      .nav {
         flex-direction: column;
         gap: 10px;
       }
 
       nav a {
-        margin: 0 5px;
-        font-size: 12px;
+        margin: 5px;
+        font-size: 14px;
       }
 
       .hero h1 {
-        font-size: 34px;
+        font-size: 30px;
       }
 
-      .hero p {
-        font-size: 17px;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 50px 20px;
+      .hero {
+        padding: 60px 15px;
       }
     }
   </style>
@@ -272,51 +258,52 @@
 
   <!-- HEADER -->
   <header>
+    <div class="nav">
 
-    <div class="logo">
-      <img src="IMG-20260903-WA8253.jpg"
-           alt="A.S KAWO TABLE WATER Logo">
+      <div class="logo-area">
+        <img src="IMG-20260903-WA8253.jpg" alt="A.S KAWO TABLE WATER Logo">
+        <h2>A.S KAWO TABLE WATER</h2>
+      </div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#order">Order</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
     </div>
-
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#price">Price</a>
-      <a href="#order">Order</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
   </header>
 
 
-  <!-- HOME -->
+  <!-- HERO -->
   <section class="hero" id="home">
 
-    <div class="hero-content">
+    <img src="IMG-20260903-WA8253.jpg" alt="A.S KAWO TABLE WATER">
 
-      <h1>A.S KAWO TABLE WATER</h1>
+    <h1>A.S KAWO TABLE WATER</h1>
 
-      <p>💧 Pure • Fresh • Clean • Quality Drinking Water</p>
+    <p>
+      Clean, Fresh & Quality Table Water
+    </p>
 
-      <p>📍 Serving Dandume, Katsina</p>
+    <p>
+      📍 Titin Sheme, Dandume 830103, Katsina
+    </p>
 
-      <a class="btn whatsapp"
-         href="https://wa.me/2347063255239">
-        💬 WhatsApp
-      </a>
+    <a
+      href="https://wa.me/2347063255239"
+      class="btn btn-green"
+      target="_blank">
+      Order on WhatsApp
+    </a>
 
-      <a class="btn call"
-         href="tel:07063255239">
-        📞 Call Now
-      </a>
-
-      <a class="btn maps"
-         href="https://maps.app.goo.gl/FMa6qishhTGKDku69"
-         target="_blank">
-        📍 Get Directions
-      </a>
-
-    </div>
+    <a
+      href="tel:07063255239"
+      class="btn btn-white">
+      Call Now
+    </a>
 
   </section>
 
@@ -324,22 +311,24 @@
   <!-- ABOUT -->
   <section id="about">
 
-    <h2>About Us</h2>
+    <h2 class="section-title">About Us</h2>
 
     <div class="about">
 
       <p>
-        Welcome to A.S KAWO TABLE WATER.
-        We provide clean, fresh and quality drinking water
-        for homes, shops, events and businesses.
+        <strong>A.S KAWO TABLE WATER</strong> provides clean,
+        fresh and quality table water for homes, shops,
+        businesses, events and other occasions.
       </p>
 
-      <br>
+      <p style="margin-top:15px;">
+        We are located at
+        <strong>Titin Sheme, Dandume 830103, Katsina, Nigeria.</strong>
+      </p>
 
-      <p>
-        Our business is located in Dandume, Katsina,
-        and we are committed to providing reliable service
-        at an affordable price.
+      <p style="margin-top:15px;">
+        Our goal is to provide reliable and affordable
+        drinking water to our customers.
       </p>
 
     </div>
@@ -347,34 +336,38 @@
   </section>
 
 
-  <!-- WHY CHOOSE US -->
-  <section>
+  <!-- PRODUCTS -->
+  <section id="products">
 
-    <h2>Why Choose Us?</h2>
+    <h2 class="section-title">Our Products & Services</h2>
 
     <div class="cards">
 
       <div class="card">
-        <div class="icon">💧</div>
-        <h3>Clean Water</h3>
+        <h3>💧 Table Water</h3>
         <p>
-          Fresh and clean drinking water for everyday use.
+          Clean and quality drinking water for everyday use.
         </p>
       </div>
 
       <div class="card">
-        <div class="icon">💰</div>
-        <h3>Affordable Price</h3>
+        <h3>📦 Bulk Orders</h3>
         <p>
-          Quality drinking water at an affordable price.
+          We accept bulk orders for shops, businesses and organizations.
         </p>
       </div>
 
       <div class="card">
-        <div class="icon">⭐</div>
-        <h3>Reliable Service</h3>
+        <h3>🎉 Event Supply</h3>
         <p>
-          We are committed to serving our customers.
+          Get table water for weddings, meetings, parties and other events.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🏪 Business Supply</h3>
+        <p>
+          Regular water supply for shops and businesses.
         </p>
       </div>
 
@@ -384,21 +377,26 @@
 
 
   <!-- PRICE -->
-  <section class="price-section" id="price">
+  <section id="price">
 
-    <h2>Our Price</h2>
+    <h2 class="section-title">Our Price</h2>
 
     <div class="price-box">
 
       <h3>Table Water</h3>
 
-      <div class="price">₦200</div>
+      <div class="price">
+        ₦200
+      </div>
 
-      <p>Per bag / carton</p>
+      <p>
+        Per bag / carton
+      </p>
 
-      <a class="btn whatsapp"
-         href="https://wa.me/2347063255239">
-        🛒 Order Now
+      <a
+        href="#order"
+        class="btn btn-dark">
+        Order Now
       </a>
 
     </div>
@@ -407,98 +405,98 @@
 
 
   <!-- ORDER -->
-  <section class="order" id="order">
+  <section id="order">
 
-    <h2>Place Your Order</h2>
+    <h2 class="section-title">Place Your Order</h2>
 
-    <p>
-      Cika bayanan da ke ƙasa, sannan ka danna
-      <strong>Send Order on WhatsApp</strong>.
-    </p>
+    <form onsubmit="sendOrder(event)">
 
-    <div class="order-box">
+      <label for="name">
+        Your Name
+      </label>
 
-      <form onsubmit="sendOrder(event)">
+      <input
+        type="text"
+        id="name"
+        placeholder="Enter your name"
+        required>
 
-        <label>Your Name</label>
 
-        <input
-          type="text"
-          id="name"
-          placeholder="Enter your name"
-          required
-        >
+      <label for="quantity">
+        Quantity
+      </label>
 
-        <label>Quantity</label>
+      <input
+        type="number"
+        id="quantity"
+        min="1"
+        placeholder="Enter quantity"
+        required>
 
-        <select id="quantity" required>
 
-          <option value="">Select quantity</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="5">5</option>
-          <option value="10">10</option>
-          <option value="20">20</option>
-          <option value="50">50</option>
+      <label for="location">
+        Delivery Location
+      </label>
 
-        </select>
+      <textarea
+        id="location"
+        rows="3"
+        placeholder="Enter your delivery location"
+        required></textarea>
 
-        <label>Delivery / Location</label>
 
-        <input
-          type="text"
-          id="location"
-          placeholder="Enter your location"
-          required
-        >
+      <button type="submit">
+        Order via WhatsApp
+      </button>
 
-        <button type="submit">
-          💬 Send Order on WhatsApp
-        </button>
-
-      </form>
-
-    </div>
+    </form>
 
   </section>
 
 
   <!-- CONTACT -->
-  <section class="contact" id="contact">
+  <section id="contact">
 
-    <h2>Contact Us</h2>
+    <h2 class="section-title">Contact Us</h2>
 
-    <div class="contact-info">
-
-      <p>📍 <strong>Titin Sheme, Dandume, Katsina</strong></p>
-
-      <p>📞 <strong>07063255239</strong></p>
-
-    </div>
-
-    <a class="btn whatsapp"
-       href="https://wa.me/2347063255239">
-      💬 Chat on WhatsApp
-    </a>
-
-    <a class="btn call"
-       href="tel:07063255239">
-      📞 Call Us
-    </a>
-
-    <div class="location-box">
-
-      <h3>📍 Find Us on Google Maps</h3>
+    <div class="contact">
 
       <p>
-        A.S KAWO TABLE WATER<br>
-        Titin Sheme, Dandume, Katsina
+        📞 <strong>07063255239</strong>
       </p>
 
-      <a class="btn maps"
-         href="https://maps.app.goo.gl/FMa6qishhTGKDku69"
-         target="_blank">
-        🗺️ Open Google Maps
+      <p>
+        📍 <strong>Titin Sheme, Dandume 830103, Katsina, Nigeria</strong>
+      </p>
+
+      <p>
+        💰 Price:
+        <strong>₦200 per bag / carton</strong>
+      </p>
+
+      <br>
+
+      <a
+        href="https://wa.me/2347063255239"
+        class="btn btn-green"
+        target="_blank">
+        WhatsApp Us
+      </a>
+
+      <a
+        href="tel:07063255239"
+        class="btn btn-dark">
+        Call 07063255239
+      </a>
+
+      <br><br>
+
+      <a
+        href="https://maps.app.goo.gl/FMa6qishhTGKDku69"
+        class="btn btn-white"
+        target="_blank"
+        style="border: 2px solid #0077b6;">
+        📍 Get Directions on Google Maps
       </a>
 
     </div>
@@ -514,7 +512,11 @@
     </p>
 
     <p>
-      Dandume, Katsina, Nigeria
+      Titin Sheme, Dandume 830103, Katsina
+    </p>
+
+    <p>
+      Clean Water • Quality Service • Affordable Price
     </p>
 
   </footer>
@@ -531,30 +533,45 @@
         document.getElementById("name").value;
 
       const quantity =
-        document.getElementById("quantity").value;
+        parseInt(document.getElementById("quantity").value);
 
       const location =
         document.getElementById("location").value;
 
       const price = 200;
 
-      const total = quantity * price;
+      const total =
+        quantity * price;
 
       const message =
         "Hello A.S KAWO TABLE WATER.%0A%0A" +
-        "Name: " + encodeURIComponent(name) + "%0A" +
-        "Quantity: " + encodeURIComponent(quantity) + "%0A" +
-        "Price per bag/carton: ₦" + price + "%0A" +
-        "Total: ₦" + total + "%0A" +
-        "Delivery Location: " + encodeURIComponent(location);
+        "Name: " +
+        encodeURIComponent(name) +
+        "%0A" +
+
+        "Quantity: " +
+        encodeURIComponent(quantity) +
+        "%0A" +
+
+        "Price per bag/carton: ₦" +
+        price +
+        "%0A" +
+
+        "Total: ₦" +
+        total +
+        "%0A" +
+
+        "Delivery Location: " +
+        encodeURIComponent(location);
 
       window.open(
         "https://wa.me/2347063255239?text=" + message,
         "_blank"
       );
+
     }
 
   </script>
 
 </body>
-    </html>
+  </html>
