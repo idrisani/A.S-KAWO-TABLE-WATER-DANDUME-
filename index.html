@@ -3,58 +3,187 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A.S KAWO TABLE WATER</title>
+
+  <title>A.S KAWO TABLE WATER | Dandume</title>
+
+  <meta name="description" content="A.S KAWO TABLE WATER - Clean, fresh and quality drinking water in Dandume.">
 
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: Arial, sans-serif;
-      background: #eaf8ff;
+      line-height: 1.6;
       color: #123;
-      text-align: center;
+      background: #f5fbff;
     }
 
     header {
-      background: #0077b6;
+      background: #0066cc;
       color: white;
-      padding: 40px 20px;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    h1 {
-      margin: 0;
-      font-size: 32px;
-    }
-
-    .box {
-      background: white;
-      margin: 30px auto;
-      padding: 25px;
-      max-width: 500px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px #aaa;
-    }
-
-    .price {
-      font-size: 25px;
+    .logo {
+      font-size: 20px;
       font-weight: bold;
-      color: #0077b6;
     }
 
-    .button {
-      display: inline-block;
-      background: #25d366;
+    nav a {
       color: white;
-      padding: 15px 25px;
-      border-radius: 10px;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #0077cc, #00b4d8);
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      margin: 6px;
+      border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
     }
 
-    footer {
-      background: #023e8a;
+    .whatsapp {
+      background: #25d366;
       color: white;
-      padding: 20px;
-      margin-top: 40px;
+    }
+
+    .call {
+      background: white;
+      color: #0066cc;
+    }
+
+    section {
+      padding: 65px 7%;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 32px;
+      color: #0066cc;
+      margin-bottom: 15px;
+    }
+
+    .about {
+      max-width: 800px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 1000px;
+      margin: 35px auto 0;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .card .icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .price-box {
+      max-width: 450px;
+      margin: 30px auto;
+      background: white;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .price {
+      font-size: 38px;
+      font-weight: bold;
+      color: #0066cc;
+      margin: 15px 0;
+    }
+
+    .contact {
+      background: #e8f7ff;
+    }
+
+    .contact-info {
+      margin: 20px 0;
+      font-size: 18px;
+    }
+
+    footer {
+      background: #003b73;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 50px 20px;
+      }
     }
   </style>
 </head>
@@ -62,31 +191,156 @@
 <body>
 
   <header>
-    <h1>💧 A.S KAWO TABLE WATER</h1>
-    <p>Pure • Fresh • Clean Drinking Water</p>
+    <div class="logo">💧 A.S KAWO</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#price">Price</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <div class="box">
-    <h2>Welcome to A.S KAWO TABLE WATER</h2>
 
-    <p>
-      Muna samar da tsaftataccen ruwan sha mai inganci
-      ga al'umma a Dandume.
-    </p>
+  <section class="hero" id="home">
+    <div class="hero-content">
 
-    <p class="price">₦200 kowace Leda</p>
+      <h1>A.S KAWO TABLE WATER</h1>
 
-    <p>📍 Location: Dandume</p>
-    <p>📞 Phone: 07063255239</p>
+      <p>
+        Pure. Fresh. Clean. Quality drinking water you can trust.
+      </p>
 
-    <a class="button" href="https://wa.me/2347063255239">
-      Tuntube mu ta WhatsApp
+      <a class="btn whatsapp"
+         href="https://wa.me/2347063255239">
+        💬 Order on WhatsApp
+      </a>
+
+      <a class="btn call"
+         href="tel:07063255239">
+        📞 Call Us
+      </a>
+
+    </div>
+  </section>
+
+
+  <section id="about">
+
+    <h2>About Us</h2>
+
+    <div class="about">
+
+      <p>
+        A.S KAWO TABLE WATER is a local drinking water business
+        serving customers in Dandume with clean, fresh and quality
+        table water.
+      </p>
+
+      <br>
+
+      <p>
+        Our goal is to provide reliable and affordable drinking water
+        for homes, shops, events and businesses.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>Why Choose Us?</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">💧</div>
+        <h3>Clean Water</h3>
+        <p>
+          We provide clean and fresh drinking water.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💰</div>
+        <h3>Affordable Price</h3>
+        <p>
+          Quality water at an affordable price.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⭐</div>
+        <h3>Reliable Service</h3>
+        <p>
+          We are committed to serving our customers.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="price">
+
+    <h2>Our Price</h2>
+
+    <div class="price-box">
+
+      <h3>Table Water</h3>
+
+      <div class="price">
+        ₦200
+      </div>
+
+      <p>Per bag/carton</p>
+
+      <br>
+
+      <a class="btn whatsapp"
+         href="https://wa.me/2347063255239">
+        Order Now
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <div class="contact-info">
+
+      <p>📍 <strong>Location:</strong> Dandume</p>
+
+      <p>📞 <strong>Phone:</strong> 07063255239</p>
+
+    </div>
+
+    <a class="btn whatsapp"
+       href="https://wa.me/2347063255239">
+      💬 Chat With Us on WhatsApp
     </a>
-  </div>
+
+  </section>
+
 
   <footer>
-    © 2026 A.S KAWO TABLE WATER
+
+    <p>
+      © 2026 A.S KAWO TABLE WATER. All Rights Reserved.
+    </p>
+
+    <p>
+      Dandume, Nigeria
+    </p>
+
   </footer>
 
 </body>
-  </html>
+    </html>
