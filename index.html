@@ -10,51 +10,55 @@
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
+      background: #f4fbff;
       color: #123;
-      background: #f5fbff;
+      line-height: 1.6;
     }
 
     header {
       background: #0066cc;
-      color: white;
-      padding: 18px 7%;
+      padding: 12px 6%;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
     }
 
-    .logo {
-      font-size: 20px;
-      font-weight: bold;
+    .logo img {
+      width: 55px;
+      height: 55px;
+      object-fit: cover;
+      border-radius: 50%;
+      background: white;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 18px;
+      margin-left: 15px;
       font-size: 14px;
+      font-weight: bold;
     }
 
     .hero {
-      min-height: 85vh;
+      min-height: 82vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 60px 20px;
-      background: linear-gradient(135deg, #0077cc, #00b4d8);
       color: white;
+      background: linear-gradient(135deg, #0066cc, #00b4d8);
     }
 
     .hero-content {
@@ -62,19 +66,19 @@
     }
 
     .hero h1 {
-      font-size: 46px;
+      font-size: 45px;
       margin-bottom: 15px;
     }
 
     .hero p {
       font-size: 19px;
-      margin-bottom: 25px;
+      margin-bottom: 28px;
     }
 
     .btn {
       display: inline-block;
       padding: 14px 25px;
-      margin: 6px;
+      margin: 5px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
@@ -96,9 +100,9 @@
     }
 
     section h2 {
-      font-size: 32px;
       color: #0066cc;
-      margin-bottom: 15px;
+      font-size: 31px;
+      margin-bottom: 18px;
     }
 
     .about {
@@ -108,27 +112,31 @@
     }
 
     .cards {
+      max-width: 1000px;
+      margin: 35px auto 0;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
-      max-width: 1000px;
-      margin: 35px auto 0;
     }
 
     .card {
       background: white;
       padding: 30px 20px;
-      border-radius: 15px;
+      border-radius: 16px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     }
 
-    .card .icon {
-      font-size: 40px;
-      margin-bottom: 12px;
+    .icon {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .price-section {
+      background: #e9f8ff;
     }
 
     .price-box {
-      max-width: 450px;
+      max-width: 430px;
       margin: 30px auto;
       background: white;
       padding: 35px;
@@ -137,19 +145,24 @@
     }
 
     .price {
-      font-size: 38px;
-      font-weight: bold;
       color: #0066cc;
+      font-size: 40px;
+      font-weight: bold;
       margin: 15px 0;
     }
 
     .contact {
-      background: #e8f7ff;
+      background: #0066cc;
+      color: white;
+    }
+
+    .contact h2 {
+      color: white;
     }
 
     .contact-info {
-      margin: 20px 0;
       font-size: 18px;
+      margin: 20px 0;
     }
 
     footer {
@@ -160,13 +173,15 @@
     }
 
     @media (max-width: 700px) {
+
       header {
         flex-direction: column;
         gap: 10px;
       }
 
       nav a {
-        margin: 0 7px;
+        margin: 0 6px;
+        font-size: 13px;
       }
 
       .hero h1 {
@@ -190,8 +205,13 @@
 
 <body>
 
+  <!-- HEADER -->
   <header>
-    <div class="logo">💧 A.S KAWO</div>
+
+    <div class="logo">
+      <img src="IMG-20260903-WA8253.jpg"
+           alt="A.S KAWO TABLE WATER Logo">
+    </div>
 
     <nav>
       <a href="#home">Home</a>
@@ -199,16 +219,23 @@
       <a href="#price">Price</a>
       <a href="#contact">Contact</a>
     </nav>
+
   </header>
 
 
+  <!-- HOME -->
   <section class="hero" id="home">
+
     <div class="hero-content">
 
       <h1>A.S KAWO TABLE WATER</h1>
 
       <p>
-        Pure. Fresh. Clean. Quality drinking water you can trust.
+        Pure • Fresh • Clean • Quality Drinking Water
+      </p>
+
+      <p>
+        Serving Dandume and surrounding areas.
       </p>
 
       <a class="btn whatsapp"
@@ -218,30 +245,32 @@
 
       <a class="btn call"
          href="tel:07063255239">
-        📞 Call Us
+        📞 Call Now
       </a>
 
     </div>
+
   </section>
 
 
+  <!-- ABOUT -->
   <section id="about">
 
-    <h2>About Us</h2>
+    <h2>About A.S KAWO</h2>
 
     <div class="about">
 
       <p>
-        A.S KAWO TABLE WATER is a local drinking water business
-        serving customers in Dandume with clean, fresh and quality
-        table water.
+        A.S KAWO TABLE WATER is a drinking water business
+        located in Dandume.
       </p>
 
       <br>
 
       <p>
-        Our goal is to provide reliable and affordable drinking water
-        for homes, shops, events and businesses.
+        We are committed to providing clean, fresh and quality
+        drinking water at an affordable price for homes,
+        shops, events and businesses.
       </p>
 
     </div>
@@ -249,6 +278,7 @@
   </section>
 
 
+  <!-- WHY US -->
   <section>
 
     <h2>Why Choose Us?</h2>
@@ -259,21 +289,21 @@
         <div class="icon">💧</div>
         <h3>Clean Water</h3>
         <p>
-          We provide clean and fresh drinking water.
+          Clean and fresh drinking water for everyday use.
         </p>
       </div>
 
       <div class="card">
         <div class="icon">💰</div>
-        <h3>Affordable Price</h3>
+        <h3>Affordable</h3>
         <p>
-          Quality water at an affordable price.
+          Quality drinking water at an affordable price.
         </p>
       </div>
 
       <div class="card">
         <div class="icon">⭐</div>
-        <h3>Reliable Service</h3>
+        <h3>Reliable</h3>
         <p>
           We are committed to serving our customers.
         </p>
@@ -284,7 +314,8 @@
   </section>
 
 
-  <section id="price">
+  <!-- PRICE -->
+  <section class="price-section" id="price">
 
     <h2>Our Price</h2>
 
@@ -296,13 +327,13 @@
         ₦200
       </div>
 
-      <p>Per bag/carton</p>
+      <p>Per bag / carton</p>
 
       <br>
 
       <a class="btn whatsapp"
          href="https://wa.me/2347063255239">
-        Order Now
+        🛒 Order Now
       </a>
 
     </div>
@@ -310,30 +341,37 @@
   </section>
 
 
+  <!-- CONTACT -->
   <section class="contact" id="contact">
 
     <h2>Contact Us</h2>
 
     <div class="contact-info">
 
-      <p>📍 <strong>Location:</strong> Dandume</p>
+      <p>📍 <strong>Dandume, Nigeria</strong></p>
 
-      <p>📞 <strong>Phone:</strong> 07063255239</p>
+      <p>📞 <strong>07063255239</strong></p>
 
     </div>
 
     <a class="btn whatsapp"
        href="https://wa.me/2347063255239">
-      💬 Chat With Us on WhatsApp
+      💬 Chat on WhatsApp
+    </a>
+
+    <a class="btn call"
+       href="tel:07063255239">
+      📞 Call Us
     </a>
 
   </section>
 
 
+  <!-- FOOTER -->
   <footer>
 
     <p>
-      © 2026 A.S KAWO TABLE WATER. All Rights Reserved.
+      © 2026 A.S KAWO TABLE WATER
     </p>
 
     <p>
@@ -343,4 +381,4 @@
   </footer>
 
 </body>
-    </html>
+  </html>
