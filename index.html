@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>A.S KAWO TABLE WATER | Dandume</title>
+  <title>A.S KAWO TABLE WATER | Pure & Fresh Water</title>
 
-  <meta name="description" content="A.S KAWO TABLE WATER - Quality table water in Titin Sheme, Dandume, Katsina. ₦200 per bag/carton. Order now on WhatsApp.">
+  <meta name="description"
+    content="A.S KAWO TABLE WATER - Clean, fresh and quality table water in Titin Sheme, Dandume, Katsina. Order via WhatsApp.">
 
   <style>
     * {
@@ -17,238 +18,482 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f9ff;
+      font-family: Arial, Helvetica, sans-serif;
       color: #123;
+      background: #f5fbff;
       line-height: 1.6;
     }
 
+    :root {
+      --blue: #0077b6;
+      --dark-blue: #023e8a;
+      --light-blue: #90e0ef;
+      --cyan: #00b4d8;
+      --white: #ffffff;
+      --green: #25d366;
+      --dark: #023047;
+    }
+
+    /* HEADER */
     header {
-      background: #0077b6;
-      color: white;
-      padding: 15px 5%;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 3px 20px rgba(0,0,0,0.08);
     }
 
     .nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 12px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1100px;
-      margin: auto;
     }
 
-    .logo-area {
+    .brand {
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .logo-area img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
+    .brand img {
+      width: 52px;
+      height: 52px;
       object-fit: cover;
-      background: white;
+      border-radius: 50%;
+      border: 2px solid var(--light-blue);
     }
 
-    .logo-area h2 {
-      font-size: 18px;
+    .brand h2 {
+      font-size: 17px;
+      color: var(--dark-blue);
     }
 
     nav a {
-      color: white;
       text-decoration: none;
-      margin-left: 15px;
+      color: var(--dark-blue);
       font-weight: bold;
+      margin-left: 18px;
+      font-size: 14px;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: var(--cyan);
     }
 
+    /* HERO */
     .hero {
-      background: linear-gradient(135deg, #0077b6, #00b4d8);
-      color: white;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
       text-align: center;
-      padding: 80px 20px;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top right, #90e0ef 0%, transparent 30%),
+        linear-gradient(135deg, #0077b6, #00b4d8);
+      color: white;
+      padding: 70px 20px;
     }
 
-    .hero img {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
+    .hero-content {
+      max-width: 900px;
+      margin: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-logo {
+      width: 145px;
+      height: 145px;
       object-fit: cover;
+      border-radius: 50%;
       background: white;
-      padding: 5px;
-      margin-bottom: 20px;
+      padding: 6px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+      margin-bottom: 25px;
     }
 
     .hero h1 {
-      font-size: 38px;
-      margin-bottom: 10px;
+      font-size: clamp(32px, 7vw, 58px);
+      line-height: 1.1;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 span {
+      color: #caf0f8;
     }
 
     .hero p {
-      font-size: 18px;
-      margin-bottom: 20px;
+      font-size: 19px;
+      max-width: 650px;
+      margin: 10px auto;
+    }
+
+    .location {
+      margin-top: 15px !important;
+      font-weight: bold;
+    }
+
+    .buttons {
+      margin-top: 28px;
     }
 
     .btn {
       display: inline-block;
-      padding: 13px 22px;
-      border-radius: 8px;
+      padding: 14px 25px;
+      margin: 6px;
+      border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      margin: 5px;
+      transition: 0.3s;
       border: none;
       cursor: pointer;
     }
 
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+    }
+
     .btn-white {
       background: white;
-      color: #0077b6;
+      color: var(--dark-blue);
     }
 
     .btn-green {
-      background: #25D366;
+      background: var(--green);
       color: white;
     }
 
     .btn-dark {
-      background: #023047;
+      background: var(--dark);
       color: white;
     }
 
+    /* WAVE */
+    .wave {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 90px;
+      background: #f5fbff;
+      clip-path: ellipse(70% 60% at 50% 100%);
+    }
+
+    /* GENERAL */
     section {
-      padding: 60px 20px;
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
+      padding: 80px 20px;
     }
 
-    .section-title {
+    .title {
       text-align: center;
-      margin-bottom: 35px;
-      color: #0077b6;
-      font-size: 30px;
+      margin-bottom: 45px;
     }
 
-    .about {
-      text-align: center;
-      max-width: 800px;
-      margin: auto;
-      font-size: 17px;
+    .title small {
+      color: var(--cyan);
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
+    .title h2 {
+      color: var(--dark-blue);
+      font-size: 35px;
+      margin-top: 5px;
+    }
+
+    .title p {
+      max-width: 650px;
+      margin: 10px auto;
+      color: #567;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .about-box {
+      background: white;
+      padding: 35px;
+      border-radius: 22px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.07);
+    }
+
+    .about-box h3 {
+      color: var(--blue);
+      margin-bottom: 15px;
+      font-size: 25px;
+    }
+
+    .location-card {
+      background: linear-gradient(135deg, #e0f7ff, white);
+      padding: 35px;
+      border-radius: 22px;
+      border: 1px solid #c5eef8;
+    }
+
+    .location-card h3 {
+      color: var(--dark-blue);
+      margin-bottom: 15px;
+    }
+
+    /* FEATURES */
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
     }
 
     .card {
       background: white;
       padding: 30px 20px;
-      border-radius: 12px;
+      border-radius: 20px;
       text-align: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 15px;
     }
 
     .card h3 {
-      color: #0077b6;
-      margin-bottom: 10px;
+      color: var(--dark-blue);
+      margin-bottom: 8px;
     }
 
-    .price-box {
-      background: white;
+    .card p {
+      color: #607080;
+      font-size: 14px;
+    }
+
+    /* PRICE */
+    .price-section {
+      background: linear-gradient(135deg, #023e8a, #0077b6);
+      max-width: 100%;
+      color: white;
       text-align: center;
-      padding: 40px 20px;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .price-section .title h2,
+    .price-section .title small {
+      color: white;
+    }
+
+    .price-card {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      color: #123;
+      border-radius: 25px;
+      padding: 40px 25px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    .price-card h3 {
+      color: var(--dark-blue);
+      font-size: 25px;
     }
 
     .price {
-      font-size: 42px;
-      color: #0077b6;
+      color: var(--blue);
+      font-size: 60px;
       font-weight: bold;
-      margin: 15px 0;
+      margin: 10px 0;
     }
 
+    .price-card p {
+      color: #607080;
+    }
+
+    /* ORDER */
     form {
-      background: white;
-      max-width: 600px;
+      max-width: 650px;
       margin: auto;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      background: white;
+      padding: 35px;
+      border-radius: 25px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.08);
     }
 
-    form label {
+    label {
       display: block;
-      margin-top: 15px;
       font-weight: bold;
+      color: var(--dark-blue);
+      margin-top: 15px;
     }
 
-    form input,
-    form textarea,
-    form select {
+    input,
+    textarea {
       width: 100%;
-      padding: 13px;
+      padding: 15px;
       margin-top: 7px;
-      border: 1px solid #ccc;
-      border-radius: 7px;
+      border: 1px solid #d5e3ea;
+      border-radius: 10px;
       font-size: 16px;
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px rgba(0,180,216,0.12);
+    }
+
+    .total-box {
+      background: #e9faff;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 18px;
+      text-align: center;
+      font-weight: bold;
+      color: var(--dark-blue);
+      font-size: 20px;
     }
 
     form button {
       width: 100%;
       margin-top: 20px;
-      background: #25D366;
-      color: white;
+      padding: 16px;
       border: none;
-      padding: 15px;
-      border-radius: 8px;
+      border-radius: 50px;
+      background: var(--green);
+      color: white;
       font-size: 17px;
       font-weight: bold;
       cursor: pointer;
     }
 
-    .contact {
+    /* CONTACT */
+    .contact-box {
+      background: white;
+      border-radius: 25px;
+      padding: 40px 25px;
       text-align: center;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.08);
     }
 
-    .contact p {
-      margin: 12px 0;
-      font-size: 17px;
+    .contact-item {
+      margin: 18px 0;
+      font-size: 18px;
     }
 
+    .contact-item span {
+      color: var(--blue);
+      font-weight: bold;
+    }
+
+    /* FOOTER */
     footer {
-      background: #023047;
+      background: var(--dark);
       color: white;
       text-align: center;
-      padding: 25px 15px;
+      padding: 35px 20px;
     }
 
-    @media (max-width: 700px) {
+    footer h3 {
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: #c8d8df;
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    /* FLOATING WHATSAPP */
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 60px;
+      height: 60px;
+      background: var(--green);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      z-index: 2000;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+
       .nav {
         flex-direction: column;
         gap: 10px;
       }
 
-      nav a {
-        margin: 5px;
-        font-size: 14px;
+      nav {
+        text-align: center;
       }
 
-      .hero h1 {
-        font-size: 30px;
+      nav a {
+        display: inline-block;
+        margin: 4px 6px;
+        font-size: 12px;
       }
 
       .hero {
-        padding: 60px 15px;
+        min-height: 620px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      section {
+        padding: 60px 18px;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .brand h2 {
+        font-size: 15px;
+      }
+
+      .hero-logo {
+        width: 120px;
+        height: 120px;
+      }
+
+      .price {
+        font-size: 50px;
+      }
+
+      form {
+        padding: 25px 18px;
       }
     }
   </style>
@@ -260,15 +505,18 @@
   <header>
     <div class="nav">
 
-      <div class="logo-area">
-        <img src="IMG-20260903-WA8253.jpg" alt="A.S KAWO TABLE WATER Logo">
+      <div class="brand">
+        <img src="IMG-20260903-WA8253.jpg"
+             alt="A.S KAWO TABLE WATER Logo">
+
         <h2>A.S KAWO TABLE WATER</h2>
       </div>
 
       <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#products">Products</a>
+        <a href="#services">Services</a>
+        <a href="#price">Price</a>
         <a href="#order">Order</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -280,30 +528,44 @@
   <!-- HERO -->
   <section class="hero" id="home">
 
-    <img src="IMG-20260903-WA8253.jpg" alt="A.S KAWO TABLE WATER">
+    <div class="hero-content">
 
-    <h1>A.S KAWO TABLE WATER</h1>
+      <img class="hero-logo"
+           src="IMG-20260903-WA8253.jpg"
+           alt="A.S KAWO TABLE WATER">
 
-    <p>
-      Clean, Fresh & Quality Table Water
-    </p>
+      <h1>
+        Pure Water.<br>
+        <span>Pure Refreshment.</span>
+      </h1>
 
-    <p>
-      📍 Titin Sheme, Dandume 830103, Katsina
-    </p>
+      <p>
+        Clean, fresh and quality table water
+        for homes, shops, businesses and events.
+      </p>
 
-    <a
-      href="https://wa.me/2347063255239"
-      class="btn btn-green"
-      target="_blank">
-      Order on WhatsApp
-    </a>
+      <p class="location">
+        📍 Titin Sheme, Dandume 830103, Katsina
+      </p>
 
-    <a
-      href="tel:07063255239"
-      class="btn btn-white">
-      Call Now
-    </a>
+      <div class="buttons">
+
+        <a href="https://wa.me/2347063255239"
+           class="btn btn-green"
+           target="_blank">
+          💬 Order on WhatsApp
+        </a>
+
+        <a href="tel:07063255239"
+           class="btn btn-white">
+          📞 Call Now
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="wave"></div>
 
   </section>
 
@@ -311,64 +573,132 @@
   <!-- ABOUT -->
   <section id="about">
 
-    <h2 class="section-title">About Us</h2>
-
-    <div class="about">
-
+    <div class="title">
+      <small>About Us</small>
+      <h2>Quality You Can Trust</h2>
       <p>
-        <strong>A.S KAWO TABLE WATER</strong> provides clean,
-        fresh and quality table water for homes, shops,
-        businesses, events and other occasions.
+        We are committed to providing clean and affordable
+        table water to our customers.
       </p>
+    </div>
 
-      <p style="margin-top:15px;">
-        We are located at
-        <strong>Titin Sheme, Dandume 830103, Katsina, Nigeria.</strong>
-      </p>
+    <div class="about-grid">
 
-      <p style="margin-top:15px;">
-        Our goal is to provide reliable and affordable
-        drinking water to our customers.
-      </p>
+      <div class="about-box">
+
+        <h3>💧 A.S KAWO TABLE WATER</h3>
+
+        <p>
+          A.S KAWO TABLE WATER is a local table water
+          business serving customers in Dandume and
+          surrounding areas.
+        </p>
+
+        <br>
+
+        <p>
+          Whether you need water for your home,
+          shop, business, meeting or special event,
+          we are ready to serve you.
+        </p>
+
+      </div>
+
+      <div class="location-card">
+
+        <h3>📍 Our Location</h3>
+
+        <p>
+          <strong>Titin Sheme</strong><br>
+          Dandume 830103<br>
+          Katsina, Nigeria
+        </p>
+
+        <br>
+
+        <a href="https://maps.app.goo.gl/FMa6qishhTGKDku69"
+           target="_blank"
+           class="btn btn-dark">
+          🗺️ Get Directions
+        </a>
+
+      </div>
 
     </div>
 
   </section>
 
 
-  <!-- PRODUCTS -->
-  <section id="products">
+  <!-- SERVICES -->
+  <section id="services">
 
-    <h2 class="section-title">Our Products & Services</h2>
+    <div class="title">
+
+      <small>What We Offer</small>
+
+      <h2>Our Services</h2>
+
+      <p>
+        Fresh water supply for different needs.
+      </p>
+
+    </div>
 
     <div class="cards">
 
       <div class="card">
-        <h3>💧 Table Water</h3>
+
+        <div class="icon">💧</div>
+
+        <h3>Table Water</h3>
+
         <p>
-          Clean and quality drinking water for everyday use.
+          Clean and quality drinking water
+          for everyday use.
         </p>
+
       </div>
 
-      <div class="card">
-        <h3>📦 Bulk Orders</h3>
-        <p>
-          We accept bulk orders for shops, businesses and organizations.
-        </p>
-      </div>
 
       <div class="card">
-        <h3>🎉 Event Supply</h3>
+
+        <div class="icon">📦</div>
+
+        <h3>Bulk Orders</h3>
+
         <p>
-          Get table water for weddings, meetings, parties and other events.
+          Convenient supply for shops,
+          businesses and organizations.
         </p>
+
       </div>
 
+
       <div class="card">
-        <h3>🏪 Business Supply</h3>
+
+        <div class="icon">🎉</div>
+
+        <h3>Event Supply</h3>
+
         <p>
-          Regular water supply for shops and businesses.
+          Water supply for weddings,
+          parties, meetings and events.
         </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">🏪</div>
+
+        <h3>Business Supply</h3>
+
+        <p>
+          Reliable supply for shops
+          and businesses.
+        </p>
+
       </div>
 
     </div>
@@ -377,11 +707,17 @@
 
 
   <!-- PRICE -->
-  <section id="price">
+  <section class="price-section" id="price">
 
-    <h2 class="section-title">Our Price</h2>
+    <div class="title">
 
-    <div class="price-box">
+      <small>Affordable Price</small>
+
+      <h2>Our Price</h2>
+
+    </div>
+
+    <div class="price-card">
 
       <h3>Table Water</h3>
 
@@ -393,10 +729,9 @@
         Per bag / carton
       </p>
 
-      <a
-        href="#order"
-        class="btn btn-dark">
-        Order Now
+      <a href="#order"
+         class="btn btn-dark">
+        🛒 Order Now
       </a>
 
     </div>
@@ -407,7 +742,19 @@
   <!-- ORDER -->
   <section id="order">
 
-    <h2 class="section-title">Place Your Order</h2>
+    <div class="title">
+
+      <small>Quick Order</small>
+
+      <h2>Place Your Order</h2>
+
+      <p>
+        Fill the form below and your order
+        will be sent directly to WhatsApp.
+      </p>
+
+    </div>
+
 
     <form onsubmit="sendOrder(event)">
 
@@ -430,8 +777,15 @@
         type="number"
         id="quantity"
         min="1"
+        value="1"
         placeholder="Enter quantity"
+        oninput="calculateTotal()"
         required>
+
+
+      <div class="total-box">
+        Total: ₦<span id="total">200</span>
+      </div>
 
 
       <label for="location">
@@ -446,7 +800,7 @@
 
 
       <button type="submit">
-        Order via WhatsApp
+        💬 Send Order to WhatsApp
       </button>
 
     </form>
@@ -457,47 +811,55 @@
   <!-- CONTACT -->
   <section id="contact">
 
-    <h2 class="section-title">Contact Us</h2>
+    <div class="title">
 
-    <div class="contact">
+      <small>Contact Us</small>
 
-      <p>
-        📞 <strong>07063255239</strong>
-      </p>
+      <h2>Let's Talk</h2>
 
-      <p>
-        📍 <strong>Titin Sheme, Dandume 830103, Katsina, Nigeria</strong>
-      </p>
+    </div>
 
-      <p>
+    <div class="contact-box">
+
+      <div class="contact-item">
+        📞 Phone:
+        <span>07063255239</span>
+      </div>
+
+      <div class="contact-item">
+        📍 Location:
+        <span>
+          Titin Sheme, Dandume 830103, Katsina
+        </span>
+      </div>
+
+      <div class="contact-item">
         💰 Price:
-        <strong>₦200 per bag / carton</strong>
-      </p>
+        <span>₦200 per bag / carton</span>
+      </div>
 
-      <br>
 
-      <a
-        href="https://wa.me/2347063255239"
-        class="btn btn-green"
-        target="_blank">
-        WhatsApp Us
-      </a>
+      <div class="buttons">
 
-      <a
-        href="tel:07063255239"
-        class="btn btn-dark">
-        Call 07063255239
-      </a>
+        <a href="https://wa.me/2347063255239"
+           class="btn btn-green"
+           target="_blank">
+          💬 WhatsApp Us
+        </a>
 
-      <br><br>
+        <a href="tel:07063255239"
+           class="btn btn-dark">
+          📞 Call Us
+        </a>
 
-      <a
-        href="https://maps.app.goo.gl/FMa6qishhTGKDku69"
-        class="btn btn-white"
-        target="_blank"
-        style="border: 2px solid #0077b6;">
-        📍 Get Directions on Google Maps
-      </a>
+        <a href="https://maps.app.goo.gl/FMa6qishhTGKDku69"
+           class="btn btn-white"
+           target="_blank"
+           style="border:2px solid #0077b6;">
+          📍 Open Google Maps
+        </a>
+
+      </div>
 
     </div>
 
@@ -507,23 +869,53 @@
   <!-- FOOTER -->
   <footer>
 
-    <p>
-      © 2026 A.S KAWO TABLE WATER
-    </p>
-
-    <p>
-      Titin Sheme, Dandume 830103, Katsina
-    </p>
+    <h3>A.S KAWO TABLE WATER 💧</h3>
 
     <p>
       Clean Water • Quality Service • Affordable Price
     </p>
 
+    <p>
+      📍 Titin Sheme, Dandume 830103, Katsina, Nigeria
+    </p>
+
+    <p>
+      📞 07063255239
+    </p>
+
+    <p style="margin-top:20px;">
+      © 2026 A.S KAWO TABLE WATER. All Rights Reserved.
+    </p>
+
   </footer>
 
 
-  <!-- WHATSAPP ORDER SCRIPT -->
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/2347063255239"
+     class="whatsapp"
+     target="_blank"
+     aria-label="Chat on WhatsApp">
+    💬
+  </a>
+
+
+  <!-- JAVASCRIPT -->
   <script>
+
+    const price = 200;
+
+    function calculateTotal() {
+
+      const quantity =
+        parseInt(document.getElementById("quantity").value) || 0;
+
+      const total = quantity * price;
+
+      document.getElementById("total").textContent =
+        total.toLocaleString();
+
+    }
+
 
     function sendOrder(event) {
 
@@ -538,13 +930,13 @@
       const location =
         document.getElementById("location").value;
 
-      const price = 200;
-
       const total =
         quantity * price;
 
+
       const message =
         "Hello A.S KAWO TABLE WATER.%0A%0A" +
+
         "Name: " +
         encodeURIComponent(name) +
         "%0A" +
@@ -563,6 +955,7 @@
 
         "Delivery Location: " +
         encodeURIComponent(location);
+
 
       window.open(
         "https://wa.me/2347063255239?text=" + message,
