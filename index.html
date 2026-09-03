@@ -1,605 +1,1175 @@
 <!DOCTYPE html>
-<html lang="ha">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>A.S KAWO TABLE WATER</title>
+<title>A.S KAWO TABLE WATER | Dandume</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+<meta name="description" content="A.S KAWO TABLE WATER - Quality table water in Titin Sheme, Dandume, Katsina. ₦200 per bag/carton. Order now on WhatsApp.">
 
-    :root {
-      --bg: #f4f9ff;
-      --card: #ffffff;
-      --text: #123;
-      --muted: #667;
-      --primary: #087fdb;
-      --primary-dark: #0565ad;
-      --border: #dce8f2;
-      --header: linear-gradient(135deg, #087fdb, #00b4d8);
-      --shadow: 0 8px 25px rgba(0,0,0,.10);
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
 
-    body.dark {
-      --bg: #101820;
-      --card: #18232d;
-      --text: #f1f5f9;
-      --muted: #aebbc7;
-      --primary: #29a9ff;
-      --primary-dark: #168bd5;
-      --border: #2d3b47;
-      --header: linear-gradient(135deg, #07538c, #087f9b);
-      --shadow: 0 8px 25px rgba(0,0,0,.35);
-    }
+:root{
+  --blue:#0066ff;
+  --dark:#06152f;
+  --cyan:#00c8ff;
+  --light:#f4f9ff;
+  --white:#ffffff;
+  --text:#18304d;
+  --green:#19b957;
+}
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      transition: .3s;
-    }
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--light);
+  color:var(--text);
+  line-height:1.6;
+}
 
-    header {
-      background: var(--header);
-      color: white;
-      padding: 18px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 4px 15px rgba(0,0,0,.15);
-    }
+a{
+  text-decoration:none;
+  color:inherit;
+}
 
-    .nav {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-    }
+.container{
+  width:92%;
+  max-width:1150px;
+  margin:auto;
+}
 
-    .brand {
-      font-size: 21px;
-      font-weight: bold;
-    }
+/* HEADER */
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(6,21,47,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
 
-    .brand small {
-      display: block;
-      font-size: 12px;
-      opacity: .9;
-      margin-top: 3px;
-    }
+.nav{
+  min-height:72px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-    .dark-btn {
-      border: 1px solid rgba(255,255,255,.5);
-      background: rgba(255,255,255,.15);
-      color: white;
-      padding: 9px 13px;
-      border-radius: 25px;
-      cursor: pointer;
-      font-size: 14px;
-    }
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:white;
+  font-weight:900;
+}
 
-    .hero {
-      max-width: 1100px;
-      margin: auto;
-      padding: 55px 20px 35px;
-      text-align: center;
-    }
+.brand-icon{
+  width:43px;
+  height:43px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,#00c8ff,#0066ff);
+  box-shadow:0 0 25px rgba(0,200,255,.35);
+  font-size:14px;
+}
 
-    .water-icon {
-      width: 105px;
-      height: 135px;
-      margin: 0 auto 20px;
-      position: relative;
-    }
+.brand span{
+  font-size:15px;
+}
 
-    .bottle {
-      width: 58px;
-      height: 105px;
-      background: linear-gradient(90deg, #bcecff, #fff, #9bddf7);
-      border: 3px solid #65c8ed;
-      border-radius: 13px 13px 18px 18px;
-      position: absolute;
-      left: 24px;
-      bottom: 0;
-      box-shadow: 0 8px 15px rgba(0,0,0,.12);
-    }
+nav{
+  display:flex;
+  gap:24px;
+}
 
-    .cap {
-      width: 30px;
-      height: 16px;
-      background: #087fdb;
-      border-radius: 5px 5px 2px 2px;
-      position: absolute;
-      top: 12px;
-      left: 37px;
-    }
+nav a{
+  color:#dceaff;
+  font-size:14px;
+  font-weight:700;
+}
 
-    .label {
-      position: absolute;
-      left: 29px;
-      top: 52px;
-      width: 48px;
-      padding: 7px 2px;
-      background: #087fdb;
-      color: white;
-      font-size: 7px;
-      font-weight: bold;
-      text-align: center;
-      border-radius: 3px;
-    }
+nav a:hover{
+  color:#00d5ff;
+}
 
-    .hero h1 {
-      font-size: clamp(28px, 6vw, 48px);
-      margin-bottom: 12px;
-    }
+.menu{
+  display:none;
+  color:white;
+  font-size:28px;
+}
 
-    .hero p {
-      color: var(--muted);
-      font-size: 17px;
-      line-height: 1.6;
-    }
+/* HERO */
+.hero{
+  min-height:100vh;
+  padding:130px 0 70px;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(0,200,255,.28),transparent 30%),
+    radial-gradient(circle at 20% 80%,rgba(0,102,255,.28),transparent 35%),
+    linear-gradient(135deg,#041126,#073b88 55%,#009bd7);
+  color:white;
+  overflow:hidden;
+  position:relative;
+}
 
-    .price {
-      display: inline-block;
-      margin-top: 20px;
-      background: var(--primary);
-      color: white;
-      padding: 12px 22px;
-      border-radius: 30px;
-      font-size: 20px;
-      font-weight: bold;
-    }
+.hero:after{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.1);
+  right:-200px;
+  bottom:-200px;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-    }
+.hero-grid{
+  min-height:75vh;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  align-items:center;
+  gap:50px;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin: 20px 0 35px;
-    }
+.badge{
+  display:inline-block;
+  padding:8px 15px;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.09);
+  border-radius:50px;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:18px;
+}
 
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 25px 18px;
-      text-align: center;
-      box-shadow: var(--shadow);
-    }
+.hero h1{
+  font-size:clamp(42px,6vw,76px);
+  line-height:1;
+  margin-bottom:22px;
+  letter-spacing:-3px;
+}
 
-    .card-icon {
-      font-size: 35px;
-      margin-bottom: 12px;
-    }
+.hero h1 span{
+  color:#7ceaff;
+}
 
-    .card h3 {
-      margin-bottom: 8px;
-    }
+.hero p{
+  max-width:620px;
+  color:#dcefff;
+  font-size:18px;
+  margin-bottom:30px;
+}
 
-    .card p {
-      color: var(--muted);
-      line-height: 1.5;
-    }
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
 
-    .order-box {
-      max-width: 650px;
-      margin: 0 auto 40px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 25px;
-      box-shadow: var(--shadow);
-    }
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 22px;
+  border-radius:12px;
+  font-weight:800;
+  border:none;
+  cursor:pointer;
+  transition:.25s;
+}
 
-    .order-box h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+.btn-primary{
+  background:#00d26a;
+  color:white;
+  box-shadow:0 10px 30px rgba(0,210,106,.25);
+}
 
-    label {
-      display: block;
-      margin: 14px 0 7px;
-      font-weight: bold;
-    }
+.btn-primary:hover{
+  transform:translateY(-3px);
+}
 
-    input, textarea {
-      width: 100%;
-      padding: 13px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: var(--bg);
-      color: var(--text);
-      outline: none;
-      font-size: 15px;
-    }
+.btn-light{
+  background:white;
+  color:#0754b8;
+}
 
-    input:focus, textarea:focus {
-      border-color: var(--primary);
-    }
+.btn-outline{
+  border:1px solid rgba(255,255,255,.3);
+  color:white;
+  background:rgba(255,255,255,.06);
+}
 
-    .quantity {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+/* SVG PRODUCT DISPLAY */
+.product-stage{
+  min-height:470px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
 
-    .quantity button {
-      width: 42px;
-      height: 42px;
-      border: none;
-      border-radius: 50%;
-      background: var(--primary);
-      color: white;
-      font-size: 22px;
-      cursor: pointer;
-    }
+.glow{
+  position:absolute;
+  width:330px;
+  height:330px;
+  border-radius:50%;
+  background:rgba(0,210,255,.22);
+  filter:blur(15px);
+}
 
-    #qty {
-      text-align: center;
-      font-weight: bold;
-      font-size: 18px;
-    }
+.products{
+  position:relative;
+  display:flex;
+  align-items:end;
+  gap:18px;
+  transform:translateY(10px);
+}
 
-    .total {
-      margin: 20px 0;
-      padding: 15px;
-      border-radius: 12px;
-      background: var(--bg);
-      text-align: center;
-      font-size: 20px;
-      font-weight: bold;
-    }
+.bottle-svg{
+  width:210px;
+  height:360px;
+  filter:drop-shadow(0 25px 20px rgba(0,0,0,.3));
+}
 
-    .order-btn {
-      width: 100%;
-      border: none;
-      background: #20a85a;
-      color: white;
-      padding: 15px;
-      border-radius: 12px;
-      font-size: 17px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+.bag-svg{
+  width:190px;
+  height:300px;
+  filter:drop-shadow(0 25px 20px rgba(0,0,0,.28));
+}
 
-    .order-btn:hover {
-      opacity: .9;
-    }
+.price-tag{
+  position:absolute;
+  right:-25px;
+  top:30px;
+  background:#fff;
+  color:#0754b8;
+  padding:13px 18px;
+  border-radius:18px;
+  font-weight:900;
+  box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
 
-    .contact {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+.price-tag small{
+  display:block;
+  color:#68809c;
+  font-size:10px;
+}
 
-    .contact a {
-      display: inline-block;
-      margin: 8px;
-      padding: 12px 18px;
-      border-radius: 25px;
-      background: var(--primary);
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
+/* TRUST */
+.trust{
+  background:white;
+  box-shadow:0 8px 30px rgba(0,30,80,.06);
+}
 
-    footer {
-      background: #07131d;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-      line-height: 1.7;
-    }
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  padding:25px 0;
+}
 
-    @media (max-width: 750px) {
-      .cards {
-        grid-template-columns: 1fr;
-      }
+.trust-item{
+  text-align:center;
+  padding:10px;
+}
 
-      .hero {
-        padding-top: 40px;
-      }
+.trust-item strong{
+  display:block;
+  color:#0754b8;
+  font-size:18px;
+}
 
-      .brand {
-        font-size: 17px;
-      }
-    }
-  </style>
+.trust-item span{
+  font-size:13px;
+  color:#70839a;
+}
+
+/* SECTIONS */
+section{
+  padding:90px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title span{
+  color:var(--blue);
+  font-weight:800;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+.section-title h2{
+  color:var(--dark);
+  font-size:38px;
+  margin-top:6px;
+}
+
+/* ABOUT */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.about-card{
+  background:white;
+  padding:35px;
+  border-radius:25px;
+  box-shadow:0 15px 45px rgba(0,30,80,.08);
+}
+
+.about-card h3{
+  color:var(--dark);
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.checks{
+  margin-top:22px;
+  display:grid;
+  gap:13px;
+}
+
+.check{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  font-weight:700;
+}
+
+.check i{
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  background:#e2fff0;
+  color:#0ba954;
+  display:grid;
+  place-items:center;
+  font-style:normal;
+}
+
+/* WATER VISUAL */
+.water-box{
+  min-height:390px;
+  border-radius:30px;
+  background:linear-gradient(150deg,#0066ff,#00c8ff);
+  display:grid;
+  place-items:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.wave{
+  position:absolute;
+  width:700px;
+  height:250px;
+  background:rgba(255,255,255,.12);
+  border-radius:50%;
+  transform:rotate(-10deg);
+}
+
+.water-text{
+  position:relative;
+  text-align:center;
+  color:white;
+}
+
+.water-text b{
+  display:block;
+  font-size:60px;
+  line-height:1;
+}
+
+.water-text span{
+  font-size:20px;
+  font-weight:800;
+}
+
+/* SERVICES */
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.service{
+  background:white;
+  padding:30px;
+  border-radius:22px;
+  box-shadow:0 12px 35px rgba(0,30,80,.07);
+  transition:.25s;
+}
+
+.service:hover{
+  transform:translateY(-7px);
+}
+
+.icon{
+  width:58px;
+  height:58px;
+  border-radius:17px;
+  display:grid;
+  place-items:center;
+  background:#e8f5ff;
+  font-size:27px;
+  margin-bottom:20px;
+}
+
+.service h3{
+  color:var(--dark);
+  margin-bottom:8px;
+}
+
+/* PRICE */
+.price-section{
+  background:#06152f;
+  color:white;
+}
+
+.price-section .section-title h2{
+  color:white;
+}
+
+.price-card{
+  max-width:550px;
+  margin:auto;
+  background:linear-gradient(145deg,#0b2d61,#064eaa);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:30px;
+  padding:40px;
+  text-align:center;
+  box-shadow:0 25px 60px rgba(0,0,0,.25);
+}
+
+.price{
+  font-size:64px;
+  font-weight:900;
+  color:#79eaff;
+}
+
+.price small{
+  display:block;
+  color:#d6eaff;
+  font-size:14px;
+  margin-bottom:25px;
+}
+
+.price-card p{
+  color:#d7e7fa;
+  margin-bottom:25px;
+}
+
+/* ORDER */
+.order-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+.order-card{
+  background:white;
+  border-radius:25px;
+  padding:32px;
+  box-shadow:0 15px 45px rgba(0,30,80,.08);
+}
+
+.order-card h3{
+  color:var(--dark);
+  margin-bottom:20px;
+}
+
+input,select{
+  width:100%;
+  padding:14px;
+  border:1px solid #d7e2ef;
+  border-radius:11px;
+  margin-bottom:14px;
+  font-size:15px;
+  outline:none;
+}
+
+input:focus,select:focus{
+  border-color:#168aff;
+}
+
+.total{
+  padding:18px;
+  border-radius:14px;
+  background:#edf7ff;
+  color:#0754b8;
+  font-weight:900;
+  font-size:22px;
+  margin:10px 0 18px;
+  text-align:center;
+}
+
+/* LOCATION */
+.location{
+  background:#eef7ff;
+}
+
+.location-card{
+  background:white;
+  border-radius:25px;
+  padding:35px;
+  text-align:center;
+  box-shadow:0 15px 45px rgba(0,30,80,.07);
+}
+
+.location-card h3{
+  color:var(--dark);
+  font-size:25px;
+  margin-bottom:10px;
+}
+
+.map-btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 22px;
+  background:#0754b8;
+  color:white;
+  border-radius:12px;
+  font-weight:800;
+}
+
+/* FAQ */
+.faq{
+  max-width:800px;
+  margin:auto;
+}
+
+details{
+  background:white;
+  margin-bottom:12px;
+  border-radius:14px;
+  padding:18px 20px;
+  box-shadow:0 8px 25px rgba(0,30,80,.05);
+}
+
+summary{
+  cursor:pointer;
+  font-weight:800;
+  color:var(--dark);
+}
+
+/* CONTACT */
+.contact{
+  background:linear-gradient(135deg,#0066ff,#00a9df);
+  color:white;
+  text-align:center;
+}
+
+.contact h2{
+  font-size:42px;
+  margin-bottom:12px;
+}
+
+.contact p{
+  margin-bottom:25px;
+  color:#e5f8ff;
+}
+
+/* FOOTER */
+footer{
+  background:#030d20;
+  color:#9db3cf;
+  padding:35px 0;
+  text-align:center;
+}
+
+footer strong{
+  color:white;
+}
+
+footer p{
+  font-size:13px;
+  margin-top:7px;
+}
+
+/* FLOATING WHATSAPP */
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:999;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#19b957;
+  color:white;
+  display:grid;
+  place-items:center;
+  font-size:28px;
+  box-shadow:0 12px 35px rgba(0,0,0,.25);
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+  nav{
+    display:none;
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .hero{
+    padding-top:110px;
+  }
+
+  .hero-grid,
+  .about-grid,
+  .order-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-grid{
+    text-align:center;
+  }
+
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .buttons{
+    justify-content:center;
+  }
+
+  .product-stage{
+    min-height:400px;
+  }
+
+  .products{
+    transform:scale(.82);
+  }
+
+  .trust-grid{
+    grid-template-columns:1fr;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:70px 0;
+  }
+
+  .section-title h2{
+    font-size:30px;
+  }
+
+  .contact h2{
+    font-size:32px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="nav">
-      <div class="brand">
-        💧 A.S KAWO TABLE WATER
-        <small>Pure • Clean • Refreshing</small>
+<!-- HEADER -->
+<header>
+  <div class="container nav">
+
+    <a href="#" class="brand">
+      <div class="brand-icon">AK</div>
+      <span>A.S KAWO TABLE WATER</span>
+    </a>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#price">Price</a>
+      <a href="#order">Order</a>
+      <a href="#location">Location</a>
+    </nav>
+
+    <div class="menu">☰</div>
+
+  </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div>
+
+      <div class="badge">
+        💧 QUALITY • CLEAN • REFRESHING
       </div>
 
-      <button class="dark-btn" onclick="toggleDarkMode()" id="darkButton">
-        🌙 Dark Mode
-      </button>
-    </div>
-  </header>
+      <h1>
+        Pure Water.<br>
+        <span>Pure Confidence.</span>
+      </h1>
 
-  <section class="hero">
+      <p>
+        Welcome to A.S KAWO TABLE WATER — your trusted source
+        of quality table water in Dandume, Katsina.
+      </p>
 
-    <div class="water-icon">
-      <div class="cap"></div>
-      <div class="bottle">
-        <div class="label">A.S KAWO<br>TABLE WATER</div>
+      <div class="buttons">
+
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/2347063255239?text=Assalamu%20Alaikum%20A.S%20KAWO%20TABLE%20WATER.%20Ina%20son%20yin%20oda."
+          target="_blank">
+          💬 Order on WhatsApp
+        </a>
+
+        <a
+          class="btn btn-light"
+          href="tel:07063255239">
+          📞 Call 07063255239
+        </a>
+
       </div>
+
     </div>
 
-    <h1>A.S KAWO TABLE WATER</h1>
 
-    <p>
-      Ruwa mai tsafta, inganci da ɗanɗano mai kyau.
-      <br>
-      Muna samar da ruwa domin gida, shaguna da bukukuwa.
-    </p>
+    <!-- INLINE SVG PRODUCTS -->
+    <div class="product-stage">
 
-    <div class="price">
-      ₦200 / Leda
+      <div class="glow"></div>
+
+      <div class="products">
+
+        <!-- BOTTLE -->
+        <svg class="bottle-svg"
+             viewBox="0 0 220 380"
+             xmlns="http://www.w3.org/2000/svg">
+
+          <defs>
+            <linearGradient id="bottleBody" x1="0" x2="1">
+              <stop offset="0" stop-color="#dffaff"/>
+              <stop offset=".5" stop-color="#ffffff"/>
+              <stop offset="1" stop-color="#a9eaff"/>
+            </linearGradient>
+
+            <linearGradient id="water" x1="0" x2="1">
+              <stop offset="0" stop-color="#009cff"/>
+              <stop offset="1" stop-color="#00d9ff"/>
+            </linearGradient>
+          </defs>
+
+          <rect x="84" y="15" width="52" height="28"
+                rx="7" fill="#0754b8"/>
+
+          <path d="M80 40
+                   C80 65 72 70 62 84
+                   C52 98 48 125 48 170
+                   L48 325
+                   C48 350 65 365 110 365
+                   C155 365 172 350 172 325
+                   L172 170
+                   C172 125 168 98 158 84
+                   C148 70 140 65 140 40 Z"
+                fill="url(#bottleBody)"
+                stroke="#8bdfff"
+                stroke-width="3"/>
+
+          <path d="M55 178
+                   C82 164 140 164 165 178
+                   L165 326
+                   C165 346 150 355 110 355
+                   C70 355 55 346 55 326 Z"
+                fill="url(#water)"
+                opacity=".9"/>
+
+          <rect x="61" y="190"
+                width="98"
+                height="100"
+                rx="16"
+                fill="white"
+                opacity=".96"/>
+
+          <text x="110" y="225"
+                text-anchor="middle"
+                font-size="14"
+                font-weight="900"
+                fill="#0754b8">
+            A.S KAWO
+          </text>
+
+          <text x="110" y="247"
+                text-anchor="middle"
+                font-size="9"
+                font-weight="700"
+                fill="#263b59">
+            TABLE WATER
+          </text>
+
+          <circle cx="110" cy="269"
+                  r="11"
+                  fill="#00bfff"
+                  opacity=".8"/>
+
+        </svg>
+
+
+        <!-- WATER BAG / LEDA -->
+        <svg class="bag-svg"
+             viewBox="0 0 200 320"
+             xmlns="http://www.w3.org/2000/svg">
+
+          <defs>
+            <linearGradient id="bag" x1="0" x2="1">
+              <stop offset="0" stop-color="#8feaff"/>
+              <stop offset=".5" stop-color="#ffffff"/>
+              <stop offset="1" stop-color="#4fd7ff"/>
+            </linearGradient>
+          </defs>
+
+          <path d="M38 42
+                   Q100 18 162 42
+                   L174 272
+                   Q100 306 26 272 Z"
+                fill="url(#bag)"
+                stroke="#70d9ff"
+                stroke-width="4"/>
+
+          <path d="M38 42 Q100 62 162 42"
+                fill="none"
+                stroke="#149eea"
+                stroke-width="6"/>
+
+          <rect x="38" y="105"
+                width="124"
+                height="105"
+                rx="18"
+                fill="white"
+                opacity=".95"/>
+
+          <text x="100" y="143"
+                text-anchor="middle"
+                font-size="15"
+                font-weight="900"
+                fill="#0754b8">
+            A.S KAWO
+          </text>
+
+          <text x="100" y="166"
+                text-anchor="middle"
+                font-size="10"
+                font-weight="700"
+                fill="#263b59">
+            TABLE WATER
+          </text>
+
+          <text x="100" y="190"
+                text-anchor="middle"
+                font-size="8"
+                fill="#168aff">
+            PURE • CLEAN • FRESH
+          </text>
+
+        </svg>
+
+      </div>
+
+      <div class="price-tag">
+        ₦200
+        <small>PER BAG / CARTON</small>
+      </div>
+
     </div>
 
-  </section>
+  </div>
+
+</section>
+
+
+<!-- TRUST -->
+<div class="trust">
+
+  <div class="container trust-grid">
+
+    <div class="trust-item">
+      <strong>₦200</strong>
+      <span>Per Bag / Carton</span>
+    </div>
+
+    <div class="trust-item">
+      <strong>100%</strong>
+      <span>Quality Focus</span>
+    </div>
+
+    <div class="trust-item">
+      <strong>Dandume</strong>
+      <span>Katsina, Nigeria</span>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ABOUT -->
+<section id="about">
 
   <div class="container">
 
-    <div class="cards">
+    <div class="section-title">
+      <span>About Us</span>
+      <h2>Water You Can Trust</h2>
+    </div>
 
-      <div class="card">
-        <div class="card-icon">💧</div>
-        <h3>Ruwa Mai Tsafta</h3>
+    <div class="about-grid">
+
+      <div class="about-card">
+
+        <h3>A.S KAWO TABLE WATER</h3>
+
         <p>
-          Muna kula da tsafta da ingancin ruwanmu domin amfanin yau da kullum.
+          Muna samar da table water mai kyau domin
+          gidaje, shaguna, bukukuwa da sauran bukatun yau da kullum.
+        </p>
+
+        <div class="checks">
+
+          <div class="check">
+            <i>✓</i>
+            Quality table water
+          </div>
+
+          <div class="check">
+            <i>✓</i>
+            Affordable price
+          </div>
+
+          <div class="check">
+            <i>✓</i>
+            Convenient location
+          </div>
+
+          <div class="check">
+            <i>✓</i>
+            Easy WhatsApp ordering
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="water-box">
+
+        <div class="wave"></div>
+        <div class="water-text">
+          <b>💧</b>
+          <span>PURE WATER<br>FOR EVERY DAY</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>What We Offer</span>
+      <h2>Our Services</h2>
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service">
+        <div class="icon">💧</div>
+        <h3>Table Water</h3>
+        <p>
+          Quality table water suitable for homes,
+          shops and everyday consumption.
         </p>
       </div>
 
-      <div class="card">
-        <div class="card-icon">💰</div>
-        <h3>Farashi Mai Sauƙi</h3>
+      <div class="service">
+        <div class="icon">📦</div>
+        <h3>Bulk Orders</h3>
         <p>
-          ₦200 kacal kowace leda.
+          Order multiple bags/cartons for shops,
+          events and other occasions.
         </p>
       </div>
 
-      <div class="card">
-        <div class="card-icon">📍</div>
-        <h3>Location</h3>
+      <div class="service">
+        <div class="icon">📱</div>
+        <h3>Easy Ordering</h3>
         <p>
-          Dandume
+          Contact us directly by WhatsApp or phone
+          to place your order.
         </p>
       </div>
 
     </div>
 
-    <div class="order-box">
+  </div>
 
-      <h2>🛒 Yi Order Yanzu</h2>
+</section>
 
-      <label for="name">Sunanka</label>
-      <input
-        type="text"
-        id="name"
-        placeholder="Shigar da sunanka"
-      >
 
-      <label>Yawan Leda</label>
+<!-- PRICE -->
+<section id="price" class="price-section">
 
-      <div class="quantity">
+  <div class="container">
 
-        <button onclick="changeQty(-1)">−</button>
-
-        <input
-          type="number"
-          id="qty"
-          value="1"
-          min="1"
-          onchange="calculateTotal()"
-        >
-
-        <button onclick="changeQty(1)">+</button>
-
-      </div>
-
-      <label for="address">Adireshin Delivery</label>
-
-      <textarea
-        id="address"
-        rows="3"
-        placeholder="Shigar da inda za a kai order..."
-      ></textarea>
-
-      <div class="total">
-        Jimilla: ₦<span id="total">200</span>
-      </div>
-
-      <button class="order-btn" onclick="sendOrder()">
-        📱 Tura Order ta WhatsApp
-      </button>
-
+    <div class="section-title">
+      <span>Simple Pricing</span>
+      <h2>Our Price</h2>
     </div>
 
-    <div class="contact">
+    <div class="price-card">
 
-      <h2>📞 Tuntube Mu</h2>
+      <div class="price">₦200</div>
 
-      <p style="margin-top:10px;color:var(--muted);">
-        Muna jiran order ɗinka.
+      <small>PER BAG / CARTON</small>
+
+      <p>
+        Get quality table water at an affordable price.
+        For large orders or other products, contact us directly.
       </p>
 
-      <a href="tel:07063255239">
-        ☎️ 07063255239
-      </a>
-
       <a
-        href="https://wa.me/2347063255239"
-        target="_blank"
-      >
-        💬 WhatsApp
+        class="btn btn-primary"
+        href="https://wa.me/2347063255239?text=Assalamu%20Alaikum.%20Ina%20son%20sanin%20farashin%20ruwa."
+        target="_blank">
+        💬 Ask on WhatsApp
       </a>
 
     </div>
 
   </div>
 
-  <footer>
-
-    <strong>A.S KAWO TABLE WATER</strong>
-
-    <br>
-
-    📍 Dandume
-
-    <br>
-
-    📞 07063255239
-
-    <br><br>
-
-    © <span id="year"></span> A.S KAWO TABLE WATER.
-    All Rights Reserved.
-
-  </footer>
+</section>
 
 
-  <script>
+<!-- ORDER -->
+<section id="order">
 
-    const PRICE = 200;
+  <div class="container">
 
-    function calculateTotal() {
+    <div class="section-title">
+      <span>Quick Order</span>
+      <h2>Calculate Your Order</h2>
+    </div>
 
-      let qty = parseInt(document.getElementById("qty").value);
+    <div class="order-grid">
 
-      if (isNaN(qty) || qty < 1) {
-        qty = 1;
-        document.getElementById("qty").value = 1;
-      }
+      <div class="order-card">
 
-      document.getElementById("total").textContent =
-        (qty * PRICE).toLocaleString();
+        <h3>Order Details</h3>
 
-    }
+        <input
+          id="name"
+          type="text"
+          placeholder="Your name">
 
+        <input
+          id="quantity"
+          type="number"
+          min="1"
+          value="1"
+          placeholder="Quantity">
 
-    function changeQty(amount) {
+        <input
+          id="phone"
+          type="tel"
+          placeholder="Your phone number">
 
-      let qty = parseInt(document.getElementById("qty").value) || 1;
+        <div class="total">
+          Total: ₦<span id="total">200</span>
+        </div>
 
-      qty += amount;
+        <button
+          class="btn btn-primary"
+          style="width:100%;"
+          onclick="sendOrder()">
+          💬 Send Order on WhatsApp
+        </button>
 
-      if (qty < 1) {
-        qty = 1;
-      }
-
-      document.getElementById("qty").value = qty;
-
-      calculateTotal();
-
-    }
-
-
-    function sendOrder() {
-
-      const name =
-        document.getElementById("name").value.trim();
-
-      const qty =
-        parseInt(document.getElementById("qty").value) || 1;
-
-      const address =
-        document.getElementById("address").value.trim();
-
-      if (!name) {
-        alert("Don Allah ka shigar da sunanka.");
-        return;
-      }
-
-      if (!address) {
-        alert("Don Allah ka shigar da adireshin delivery.");
-        return;
-      }
-
-      const total = qty * PRICE;
-
-      const message =
-`*A.S KAWO TABLE WATER - ORDER*
-
-👤 Suna: ${name}
-
-💧 Yawan Leda: ${qty}
-
-💰 Farashi: ₦${total.toLocaleString()}
-
-📍 Adireshin Delivery:
-${address}
-
-Na shirya yin order.`;
-
-      const whatsappNumber = "2347063255239";
-
-      const url =
-        "https://wa.me/" +
-        whatsappNumber +
-        "?text=" +
-        encodeURIComponent(message);
-
-      window.open(url, "_blank");
-
-    }
+      </div>
 
 
-    function toggleDarkMode() {
+      <div class="order-card">
 
-      document.body.classList.toggle("dark");
+        <h3>Need a Large Quantity?</h3>
 
-      const isDark =
-        document.body.classList.contains("dark");
+        <p>
+          Idan kana bukatar ruwa da yawa domin
+          shop, biki, event ko wani taro,
+          tuntuɓe mu kai tsaye.
+        </p>
 
-      localStorage.setItem("darkMode", isDark);
+        <br>
 
-      document.getElementById("darkButton").textContent =
-        isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+        <p>
+          📞 <strong>07063255239</strong>
+        </p>
 
-    }
+        <p>
+          📍 <strong>Titin Sheme, Dandume 830103, Katsina</strong>
+        </p>
+
+        <br>
+
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/2347063255239"
+          target="_blank">
+          WhatsApp Us
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
-    function loadDarkMode() {
+<!-- LOCATION -->
+<section id="location" class="location">
 
-      const isDark =
-        localStorage.getItem("darkMode") === "true";
+  <div class="container">
 
-      if (isDark) {
+    <div class="section-title">
+      <span>Find Us</span>
+      <h2>Our Location</h2>
+    </div>
 
-        document.body.classList.add("dark");
+    <div class="location-card">
 
-        document.getElementById("darkButton").textContent =
-          "☀️ Light Mode";
+      <h3>📍 A.S KAWO TABLE WATER</h3>
 
-      }
-
-    }
-
-
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-
-    loadDarkMode();
-
-  </script>
-
-</body>
-    </html>
+      <p>
+        Titin Sheme, Dandume 830103,<br>
+        Katsina State, Nigeria
+  
